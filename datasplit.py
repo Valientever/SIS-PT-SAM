@@ -53,10 +53,10 @@ for video_folder in video_folders: # video_foldes == 17  # 17 videos
 # Ensure images and masks are matched correctly
 assert len(img_files) == len(gt_files), f"Mismatch between images ({len(img_files)}) and ground truth masks ({len(gt_files)})."
 
-print(f"Total frames: {len(img_files)}")
+print(f"Total frames: {len(img_files)}, {len(gt_files)}")
 # Define split sizes
 total_frames = len(img_files)
-test_size = 905  # 8 consecutive clips (already known)
+test_size = 3597  # 8 consecutive clips (already known)
 train_val_size = total_frames - test_size
 train_size = int(train_val_size * 0.8)
 val_size = train_val_size - train_size
